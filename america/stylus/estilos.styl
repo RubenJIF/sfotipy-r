@@ -14,6 +14,8 @@ gris_oscuro = #333333
 gris_claro = #818181
 rojo = #BD255B
 gris_mas_claro = #F0F0F0
+guinda = #CB2F6E
+negro_suave = #323232
 
 a
 	text-decoration none
@@ -28,6 +30,36 @@ ul
 	margin 0
 	padding 0
 //buttons
+.playlist-h
+	a
+		display none
+	p
+		color gris_claro
+		margin 0
+		padding 1.1em 0 1.2em .9em
+		text-decoration underline
+	li
+
+		border-bottom 1px solid rgba(gris_claro, .4)
+		display block
+		
+		img
+			margin .8em .6em .7em 2em
+			display inline-block
+
+		a
+			
+			position relative
+			top 1.9em
+			padding 5px
+			width 55%
+			height 1.5em
+			color negro_suave
+			display inline-block
+
+.pl-autor
+	display none
+
 .button-menu
 	color gris_oscuro
 	left .5em
@@ -209,6 +241,7 @@ ul
 			display inline-block
 			margin-left .4em
 
+
 @media screen and (min-width:480px)
 
 	.song
@@ -221,7 +254,28 @@ ul
 	.playing
 		&.medium
 			width auto
-
+	.pl-autor
+		display block
+		color gris_claro
+	.playlist-h
+		.icon-menu
+			color guinda
+			margin-left 1em
+		a
+			display inline-block
+		p
+			color negro_suave
+			text-decoration none
+			display inline-block
+		li
+			border-bottom none
+			&:nth-child(1)
+				border-top 1px solid rgba(gris_claro, .4)
+			a
+				top 1.2em
+				height 1.7em
+				padding-bottom .6em
+	
 @media screen and (min-width:1000px)
 	body
 		background gris_mas_claro
@@ -233,6 +287,7 @@ ul
 			margin 0 auto
 			width 62.5em
 			overflow hidden
+		
 	.menu
 		display block
 		background gris_mas_claro
@@ -264,3 +319,24 @@ ul
 	.logo
 	.playlist
 		display block
+	.pl-large
+		padding 1.4rem
+		//font-size 0
+		text-align center
+	
+	.playlist-h
+		.icon-menu
+			display none
+		li
+			//border 1px solid blue
+			vertical-align top
+			display inline-block
+			a
+				display block
+				top 0
+				//border 1px solid green
+				margin 0 auto
+				height 4em
+			img
+				width 200px
+				height 200px
